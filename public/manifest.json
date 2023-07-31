@@ -1,25 +1,25 @@
 {
-  "manifest_version": 2,
-  "name": "Extension Name",
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
   "version": "0.1",
-  "description": "Some Description",
-  "permissions": [
-  ],
+  "permissions": ["bookmarks", "notifications"],
+  "default_locale": "en",
   "background": {
-    "scripts": ["static/js/background.js"]
+    "service_worker": "static/js/background.js"
   },
-  "content_scripts": [{
-    "js": [ "static/js/content.js" ],
-    "matches": [
-      "http://*.example.com/*", "https://*.example.com/*"
-    ]
-  }],
+  "content_scripts": [
+    {
+      "js": ["static/js/content.js"],
+      "matches": ["https://web.archive.org/*"]
+    }
+  ],
   "icons": {
-    "192": "logo192.png"
+    "192": "logo426.png"
   },
   "browser_action": {
     "default_icon": {
-      "192": "logo192.png"
+      "192": "logo426.png"
     },
     "default_title": "Popup",
     "default_popup": "popup.html"

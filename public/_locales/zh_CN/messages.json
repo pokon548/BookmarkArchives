@@ -1,0 +1,21 @@
+{
+  "extensionName": {
+    "message": "书签存档机",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "自动将你的书签存档到 Web Archives。再也不担心丢失它们了！",
+    "description": "Description of the extension."
+  },
+
+  "archiveBookmarkNotificationTitle": {
+    "message": "正在归档：",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkNotificationMessage": {
+    "message": "这需要一些时间，请坐下来，休息一下。",
+    "description": "Title of the click notification."
+  }
+}

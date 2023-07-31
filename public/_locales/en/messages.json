@@ -1,0 +1,21 @@
+{
+  "extensionName": {
+    "message": "Bookmark Archives",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Automatically archive your bookmarks to Web Archive. Never void your marks again!",
+    "description": "Description of the extension."
+  },
+
+  "archiveBookmarkNotificationTitle": {
+    "message": "Archiving: ",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkNotificationMessage": {
+    "message": "It may take some time. Sit down and relax.",
+    "description": "Title of the click notification."
+  }
+}
