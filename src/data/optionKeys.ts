@@ -1,0 +1,3 @@
+const optionKeys = [
+    'allowNotifications',
+  ];
