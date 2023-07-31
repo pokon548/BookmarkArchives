@@ -10,6 +10,9 @@ Archive Bookmarks is a browser extension that automatically archive your newly b
 
 Currently, we only support [Wayback Machine](https://web.archive.org/). More options are coming! :)
 
+## Credit
+bookmark by Denovo Agency from [Noun Project](https://thenounproject.com/browse/icons/term/bookmark/) (CC BY 3.0)
+
 ## License
 
 Copyright (c) 2023 pokon548
