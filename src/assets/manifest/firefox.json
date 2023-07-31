@@ -6,18 +6,19 @@
   "permissions": ["bookmarks", "notifications"],
   "default_locale": "en",
   "background": {
-    "scripts": "static/js/background.js"
+    "scripts": ["static/js/background.js"]
   },
+  "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
       "js": ["static/js/content.js"],
-      "matches": ["https://web.archive.org/*"]
+      "matches": ["*://web.archive.org/*"]
     }
   ],
   "icons": {
     "192": "logo426.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "192": "logo426.png"
     },

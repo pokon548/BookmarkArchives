@@ -49,6 +49,8 @@ function ArchiveBookmark(title: string, url: string) {
         message: "插件将在 5 分钟后重试归档操作",
       });
 
+      console.log(response);
+
       setTimeout(() => {
         ArchiveBookmark(title, url);
       }, 300000);

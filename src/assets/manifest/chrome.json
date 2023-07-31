@@ -17,7 +17,7 @@
   "icons": {
     "192": "logo426.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "192": "logo426.png"
     },
