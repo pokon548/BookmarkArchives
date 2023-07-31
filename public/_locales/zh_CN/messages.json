@@ -17,5 +17,50 @@
   "archiveBookmarkNotificationMessage": {
     "message": "这需要一些时间，请坐下来，休息一下。",
     "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkSuccessNotificationTitle": {
+    "message": "成功归档：",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkSuccessNotificationMessage": {
+    "message": "无忧上网，尽享自在",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkRateLimitedNotificationTitle": {
+    "message": "服务器请求过多，暂无法存档：",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkRateLimitedNotificationMessage": {
+    "message": "将在 5 分钟内重新尝试存档",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkUnreachableOriginNotificationTitlePrefix": {
+    "message": "服务器无法访问该地址：",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkUnreachableOriginNotificationTitleAppendix": {
+    "message": "",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkUnreachableOriginNotificationMessage": {
+    "message": "检查书签地址，然后重试",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkUnknownErrorNotificationTitle": {
+    "message": "未知错误，无法归档：",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkUnknownErrorNotificationMessage": {
+    "message": "将在 5 分钟内重新尝试存档",
+    "description": "Title of the click notification."
   }
 }

@@ -17,5 +17,50 @@
   "archiveBookmarkNotificationMessage": {
     "message": "It may take some time. Sit down and relax.",
     "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkSuccessNotificationTitle": {
+    "message": "Successfully archived: ",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkSuccessNotificationMessage": {
+    "message": "Continue browsing without any worry!",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkRateLimitedNotificationTitle": {
+    "message": "Rate limited. We cannot archive at this time: ",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkRateLimitedNotificationMessage": {
+    "message": "We will retry within 5 minutes.",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkUnreachableOriginNotificationTitlePrefix": {
+    "message": "Unreachable host: ",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkUnreachableOriginNotificationTitleAppendix": {
+    "message": "",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkUnreachableOriginNotificationMessage": {
+    "message": "Check your bookmark url, and try again.",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkUnknownErrorNotificationTitle": {
+    "message": "Unknown error: ",
+    "description": "Title of the click notification."
+  },
+
+  "archiveBookmarkUnknownErrorNotificationMessage": {
+    "message": "We will retry within 5 minutes.",
+    "description": "Title of the click notification."
   }
 }

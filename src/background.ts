@@ -16,17 +16,26 @@ function ArchiveBookmark(title: string, url: string) {
       Browser.notifications.create("ARCHIVE_BOOKMARK", {
         type: "basic",
         iconUrl: "/logo426.png",
-        title: "成功归档一个书签：" + title,
+        title:
+          Browser.i18n.getMessage("archiveBookmarkSuccessNotificationTitle") +
+          title,
         priority: 2,
-        message: "你可以无忧的继续浏览互联网！",
+        message: Browser.i18n.getMessage(
+          "archiveBookmarkSuccessNotificationMessage"
+        ),
       });
     } else if (response.status === 429) {
       Browser.notifications.create("ARCHIVE_BOOKMARK", {
         type: "basic",
         iconUrl: "/logo426.png",
-        title: "受到速率限制，暂无法归档 1 个书签：" + title,
+        title:
+          Browser.i18n.getMessage(
+            "archiveBookmarkRateLimitedNotificationTitle"
+          ) + title,
         priority: 2,
-        message: "插件将在 5 分钟后重试归档操作",
+        message: Browser.i18n.getMessage(
+          "archiveBookmarkRateLimitedNotificationMessage"
+        ),
       });
 
       setTimeout(() => {
@@ -36,17 +45,31 @@ function ArchiveBookmark(title: string, url: string) {
       Browser.notifications.create("ARCHIVE_BOOKMARK", {
         type: "basic",
         iconUrl: "/logo426.png",
-        title: "归档失败，服务器报告“" + title + "”无法访问",
+        title:
+          Browser.i18n.getMessage(
+            "archiveBookmarkUnreachableOriginNotificationTitlePrefix"
+          ) +
+          title +
+          Browser.i18n.getMessage(
+            "archiveBookmarkUnreachableOriginNotificationTitleAppendix"
+          ),
         priority: 2,
-        message: "请检查你的书签地址是否正确，然后重试",
+        message: Browser.i18n.getMessage(
+          "archiveBookmarkUnreachableOriginNotificationMessage"
+        ),
       });
     } else {
       Browser.notifications.create("ARCHIVE_BOOKMARK", {
         type: "basic",
         iconUrl: "/logo426.png",
-        title: "归档失败，未知错误：" + response.status,
+        title:
+          Browser.i18n.getMessage(
+            "archiveBookmarkUnknownErrorNotificationTitle"
+          ) + response.status,
         priority: 2,
-        message: "插件将在 5 分钟后重试归档操作",
+        message: Browser.i18n.getMessage(
+          "archiveBookmarkUnknownErrorNotificationMessage"
+        ),
       });
 
       console.log(response);
