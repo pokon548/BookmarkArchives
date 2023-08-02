@@ -9,6 +9,14 @@ Archive Bookmarks is a browser extension that automatically archive your newly b
 
 Currently, we only support [Wayback Machine](https://web.archive.org/). More options are coming! :)
 
+## Build instructions (for developers)
+
+- clone [Archive Bookmarks](https://github.com/pokon548/ArchiveBookmarks) repo: `git clone https://github.com/pokon548/ArchiveBookmarks.git`
+- Go to source path: `cd ArchiveBookmarks`
+- Build the plugin:
+  - Chromium: `yarn build:chrome`
+  - Firefox: `yarn build:firefox`
+
 ## Credit
 
 bookmark by Denovo Agency from [Noun Project](https://thenounproject.com/browse/icons/term/bookmark/) (CC BY 3.0)
