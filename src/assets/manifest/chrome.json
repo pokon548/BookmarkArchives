@@ -11,7 +11,7 @@
   "content_scripts": [
     {
       "js": ["static/js/content.js"],
-      "matches": ["https://web.archive.org/*"]
+      "matches": ["https://web.archive.org/*", "https://archive.is/*"]
     }
   ],
   "icons": {

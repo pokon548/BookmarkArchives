@@ -61,15 +61,21 @@ function ArchiveBookmark(
     });
   }
 
-  const postLink = "https://web.archive.org/save/" + url;
+  const postURL = [
+    "https://web.archive.org/save/" + url,
+    "https://archive.is/submit/",
+  ];
 
-  fetch(postLink, {
-    mode: "no-cors",
+  const archiveIsFormData = new FormData();
+  archiveIsFormData.append("url", url);
+
+  const postForm = [undefined, archiveIsFormData];
+
+  fetch(postURL[options.selectedEngineId], {
+    body: postForm[options.selectedEngineId],
+    method: "POST",
   }).then((response) => {
-    if (response.ok || response.status === 0) {
-      /* TODO: I don't know why firefox will report http code 200 as 0, so I regard http status 0 as successful response too.
-       * If you know why and how to fix this, pr is welcome :)
-       */
+    if (response.ok) {
       if (isNotificationAllowed) {
         if (options.replaceURL && id) {
           Browser.bookmarks.update(id, {
