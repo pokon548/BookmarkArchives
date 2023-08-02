@@ -70,10 +70,11 @@ function ArchiveBookmark(
   archiveIsFormData.append("url", url);
 
   const postForm = [undefined, archiveIsFormData];
+  const postMethod = ["GET", "POST"];
 
   fetch(postURL[options.selectedEngineId], {
     body: postForm[options.selectedEngineId],
-    method: "POST",
+    method: postMethod[options.selectedEngineId],
   }).then((response) => {
     if (response.ok) {
       if (isNotificationAllowed) {
