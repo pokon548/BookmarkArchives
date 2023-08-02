@@ -62,5 +62,50 @@
   "archiveBookmarkUnknownErrorNotificationMessage": {
     "message": "将在 5 分钟内重新尝试存档",
     "description": "Title of the click notification."
+  },
+
+  "settingNotificationTitle": {
+    "message": "通知",
+    "description": "Title of the notification config"
+  },
+
+  "settingNotificationDescriptionFirst": {
+    "message": "如开启，每次发生存档操作时都会弹出通知",
+    "description": "Title of the notification config"
+  },
+
+  "settingNotificationDescriptionSecond": {
+    "message": "即使关闭本选项，扩展依然可能会发出致命错误的通知",
+    "description": "Title of the notification config"
+  },
+
+  "settingChangeLinkAfterArchiveTitle": {
+    "message": "存档后，替换为归档链接",
+    "description": "Title of the notification config"
+  },
+
+  "settingChangeLinkAfterArchiveDescriptionFirst": {
+    "message": "如开启，书签链接将在存档完毕后更改为指向对应归档页面的链接",
+    "description": "Title of the notification config"
+  },
+
+  "settingChangeLinkAfterArchiveDescriptionSecond": {
+    "message": "仅对新存档链接生效",
+    "description": "Title of the notification config"
+  },
+
+  "settingArchiveAllBookmarksTitle": {
+    "message": "存档所有书签",
+    "description": "Title of the notification config"
+  },
+
+  "settingArchiveAllBookmarksDescription": {
+    "message": "想要把全部书签进行一次存档？",
+    "description": "Title of the notification config"
+  },
+
+  "settingArchiveAllBookmarksButton": {
+    "message": "全部存档",
+    "description": "Title of the notification config"
   }
 }

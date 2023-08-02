@@ -62,5 +62,50 @@
   "archiveBookmarkUnknownErrorNotificationMessage": {
     "message": "We will retry within 5 minutes.",
     "description": "Title of the click notification."
+  },
+
+  "settingNotificationTitle": {
+    "message": "Notification",
+    "description": "Title of the notification config"
+  },
+
+  "settingNotificationDescriptionFirst": {
+    "message": "If enabled, you will receive notifications when archiving websites.",
+    "description": "Title of the notification config"
+  },
+
+  "settingNotificationDescriptionSecond": {
+    "message": "Even this option is off, critical notifications may still popup.",
+    "description": "Title of the notification config"
+  },
+
+  "settingChangeLinkAfterArchiveTitle": {
+    "message": "After archived, modify link to archived one",
+    "description": "Title of the notification config"
+  },
+
+  "settingChangeLinkAfterArchiveDescriptionFirst": {
+    "message": "If enabled, bookmark address will be replaced with archive url",
+    "description": "Title of the notification config"
+  },
+
+  "settingChangeLinkAfterArchiveDescriptionSecond": {
+    "message": "Only applies to newly bookmarked websites",
+    "description": "Title of the notification config"
+  },
+
+  "settingArchiveAllBookmarksTitle": {
+    "message": "Archive all bookmarks",
+    "description": "Title of the notification config"
+  },
+
+  "settingArchiveAllBookmarksDescription": {
+    "message": "Wish to archive all your existing bookmarks?",
+    "description": "Title of the notification config"
+  },
+
+  "settingArchiveAllBookmarksButton": {
+    "message": "Archive All!",
+    "description": "Title of the notification config"
   }
 }

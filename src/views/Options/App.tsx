@@ -14,12 +14,16 @@ function App(props) {
         <ul className="py-6 space-y-6 px-6">
           <li className="flex items-center">
             <Switch.Label className="flex flex-col mr-4">
-              <div className="text-xl font-bold select-none">通知</div>
-              <div className="text-sm select-none">
-                如果开启，每次发生存档操作时都会弹出通知，便于了解存档状态
+              <div className="text-xl font-bold select-none">
+                {Browser.i18n.getMessage("settingNotificationTitle")}
               </div>
               <div className="text-sm select-none">
-                请注意：即使关闭本选项，扩展依然会弹出部分致命错误的通知
+                {Browser.i18n.getMessage("settingNotificationDescriptionFirst")}
+              </div>
+              <div className="text-sm select-none">
+                {Browser.i18n.getMessage(
+                  "settingNotificationDescriptionSecond"
+                )}
               </div>
             </Switch.Label>
             <div className="flex-1" />
@@ -44,13 +48,17 @@ function App(props) {
           <li className="flex items-center">
             <Switch.Label className="flex flex-col mr-4">
               <div className="text-xl font-bold select-none">
-                存档后，替换为归档链接
+                {Browser.i18n.getMessage("settingChangeLinkAfterArchiveTitle")}
               </div>
               <div className="text-sm select-none">
-                如果开启，存档结束后，原书签里的链接会改为指向归档的链接
+                {Browser.i18n.getMessage(
+                  "settingChangeLinkAfterArchiveDescriptionFirst"
+                )}
               </div>
               <div className="text-sm select-none">
-                不推荐开启。之前存档的链接不受影响
+                {Browser.i18n.getMessage(
+                  "settingChangeLinkAfterArchiveDescriptionSecond"
+                )}
               </div>
             </Switch.Label>
             <div className="flex-1" />
@@ -76,9 +84,11 @@ function App(props) {
       </Switch.Group>
       <div className="flex items-center pb-6 space-y-6 px-6">
         <div className="flex flex-col mr-4">
-          <div className="text-xl font-bold select-none">存档所有书签</div>
+          <div className="text-xl font-bold select-none">
+            {Browser.i18n.getMessage("settingArchiveAllBookmarksTitle")}
+          </div>
           <div className="text-sm select-none">
-            如果你想要对书签里的所有网址作一次存档，请点击“全部存档”
+            {Browser.i18n.getMessage("settingArchiveAllBookmarksDescription")}
           </div>
           <div className="pt-4">
             <button
@@ -87,7 +97,7 @@ function App(props) {
                 Browser.runtime.sendMessage({ id: "archiveAll" });
               }}
             >
-              全部存档
+              {Browser.i18n.getMessage("settingArchiveAllBookmarksButton")}
             </button>
           </div>
         </div>
