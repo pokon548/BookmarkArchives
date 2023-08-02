@@ -8,7 +8,6 @@ function App(props) {
     props.allowNotification
   );
   const [enabledReplaceURL, setEnabledReplaceURL] = useState(props.replaceURL);
-
   return (
     <>
       <Switch.Group>
