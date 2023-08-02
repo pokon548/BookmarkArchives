@@ -19,7 +19,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build:chrome": "react-app-rewired build && cp src/assets/manifest/chrome.json build/manifest.json",
-    "build:firefox": "react-app-rewired build && cp src/assets/manifest/firefox.json build/manifest.json",
+    "build:firefox": "react-app-rewired build && cp src/assets/manifest/firefox-v2.json build/manifest.json",
+    "build:firefox-manifestv3": "react-app-rewired build && cp src/assets/manifest/firefox.json build/manifest.json",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
