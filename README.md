@@ -1,5 +1,5 @@
 <p align="center"><img width="128" height="128" src="https://s2.loli.net/2023/08/01/JUax93FnfYL62TX.png"></p>
-<h1 align="center">Archive Bookmarks</h1>
+<h1 align="center">Bookmark Archives</h1>
 
 <p align="center">
 </br></br>
@@ -11,7 +11,7 @@
 
 ## What is this?
 
-Archive Bookmarks is a browser extension that automatically archive your newly bookmarked website. Even the origin is down, you may easily find the archived version of your bookmark.
+Bookmark Archives is a browser extension that automatically archive your newly bookmarked website. Even the origin is down, you may easily find the archived version of your bookmark.
 
 ## Supported Engines
 
@@ -19,8 +19,8 @@ Currently, we only support [Wayback Machine](https://web.archive.org/). More opt
 
 ## Build instructions (for developers)
 
-- clone [Archive Bookmarks](https://github.com/pokon548/ArchiveBookmarks) repo: `git clone https://github.com/pokon548/ArchiveBookmarks.git`
-- Go to source path: `cd ArchiveBookmarks`
+- clone [Bookmark Archives](https://github.com/pokon548/Bookmark Archives) repo: `git clone https://github.com/pokon548/BookmarkArchives.git`
+- Go to source path: `cd BookmarkArchives`
 - Install required dependencies: `yarn`
 - Build the plugin:
   - Chromium: `yarn build:chrome`
