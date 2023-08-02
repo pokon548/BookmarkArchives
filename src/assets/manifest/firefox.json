@@ -21,7 +21,10 @@
     }
   },
   "icons": {
-    "192": "logo426.png"
+    "72": "logo72.png",
+    "96": "logo96.png",
+    "128": "logo128.png",
+    "144": "logo144.png"
   },
   "options_ui": {
     "page": "options.html"
