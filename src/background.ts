@@ -1,11 +1,10 @@
 import Browser from "webextension-polyfill";
-
-const storageCache = { allowNotification: true, replaceURL: false };
+import { options } from "./data/optionKeys";
 
 function fetchOptions() {
   Browser.storage.sync.get().then((items) => {
     // Copy the data retrieved from storage into storageCache.
-    Object.assign(storageCache, items);
+    Object.assign(options, items);
   });
 }
 
@@ -15,7 +14,7 @@ function loopBookmark(bookmark) {
       undefined,
       bookmark.title,
       bookmark.url,
-      storageCache.allowNotification
+      options.allowNotification
     );
   }
 
@@ -72,7 +71,7 @@ function ArchiveBookmark(
        * If you know why and how to fix this, pr is welcome :)
        */
       if (isNotificationAllowed) {
-        if (storageCache.replaceURL && id) {
+        if (options.replaceURL && id) {
           Browser.bookmarks.update(id, {
             url: response.url,
           });
@@ -156,7 +155,7 @@ Browser.bookmarks.onCreated.addListener((id, bookmark) => {
       id,
       bookmark.title,
       bookmark.url,
-      storageCache.allowNotification
+      options.allowNotification
     );
   }
 });
@@ -170,7 +169,7 @@ Browser.bookmarks.onChanged.addListener((id, changeInfo) => {
       id,
       changeInfo.title,
       changeInfo.url,
-      storageCache.allowNotification
+      options.allowNotification
     );
   }
 });

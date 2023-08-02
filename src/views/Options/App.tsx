@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import "./App.css";
-import { Switch } from "@headlessui/react";
+import { Listbox, Switch, Transition } from "@headlessui/react";
 import Browser from "webextension-polyfill";
+import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+
+const archiveEngines = [
+  { name: "Web Archives", id: 0 },
+  { name: "Archive.is", id: 1 },
+];
 
 function App(props) {
   const [enabledNotification, setEnabledNotification] = useState(
     props.allowNotification
   );
   const [enabledReplaceURL, setEnabledReplaceURL] = useState(props.replaceURL);
+  const [selectedEngine, setSelectedEngine] = useState(props.selectedEngineId);
+
   return (
     <>
       <Switch.Group>
@@ -82,6 +90,72 @@ function App(props) {
           </li>
         </ul>
       </Switch.Group>
+      <div className="flex items-center pb-6 space-y-6 px-6">
+        <div className="flex flex-col mr-4">
+          <div className="text-xl font-bold select-none">存档引擎</div>
+          <div className="text-sm select-none">
+            默认情况下，书签存档机使用 Web Archives
+            进行存档操作。你也可以另选一个喜欢的引擎
+          </div>
+        </div>
+        <div className="flex-1" />
+        <div className="w-24 shrink-0">
+          <Listbox
+            value={archiveEngines[selectedEngine]}
+            onChange={(selection) => {
+              setSelectedEngine(selection.id);
+              Browser.storage.sync.set({ selectedEngineId: selection.id });
+              Browser.runtime.sendMessage({ id: "optionChange" });
+            }}
+          >
+            <div className="relative mt-1">
+              <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-blue-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-300 sm:text-sm">
+                <span className="block truncate">
+                  {archiveEngines[selectedEngine].name}
+                </span>
+                <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                  <ChevronUpDownIcon
+                    className="h-5 w-5 text-gray-400"
+                    aria-hidden="true"
+                  />
+                </span>
+              </Listbox.Button>
+              <Transition
+                as={Fragment}
+                leave="transition ease-in duration-100"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-sm shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                  {archiveEngines.map((archiveEngine, archiveEngineIdx) => (
+                    <Listbox.Option
+                      key={archiveEngineIdx}
+                      className={({ active }) =>
+                        `relative cursor-default select-none py-2 pl-2 pr-2 ${
+                          active ? "bg-blue-100 text-blue-900" : "text-gray-900"
+                        }`
+                      }
+                      value={archiveEngine}
+                    >
+                      {({ selected }) => (
+                        <>
+                          <span
+                            className={`block truncate ${
+                              selected ? "font-medium" : "font-normal"
+                            }`}
+                          >
+                            {archiveEngine.name}
+                          </span>
+                        </>
+                      )}
+                    </Listbox.Option>
+                  ))}
+                </Listbox.Options>
+              </Transition>
+            </div>
+          </Listbox>
+        </div>
+      </div>
       <div className="flex items-center pb-6 space-y-6 px-6">
         <div className="flex flex-col mr-4">
           <div className="text-xl font-bold select-none">
