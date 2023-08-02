@@ -8,6 +8,7 @@
       <source srcset="https://i.imgur.com/ZluoP7T.png" media="(prefers-color-scheme: dark)">
       <img height="58" src="https://i.imgur.com/4PobQqE.png" alt="Firefox add-ons"></picture></a>
 </p>
+
 ## What is this?
 
 Archive Bookmarks is a browser extension that automatically archive your newly bookmarked website. Even the origin is down, you may easily find the archived version of your bookmark.
