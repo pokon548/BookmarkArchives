@@ -64,8 +64,13 @@ function ArchiveBookmark(
 
   const postLink = "https://web.archive.org/save/" + url;
 
-  fetch(postLink).then((response) => {
-    if (response.ok) {
+  fetch(postLink, {
+    mode: "no-cors",
+  }).then((response) => {
+    if (response.ok || response.status === 0) {
+      /* TODO: I don't know why firefox will report http code 200 as 0, so I regard http status 0 as successful response too.
+       * If you know why and how to fix this, pr is welcome :)
+       */
       if (isNotificationAllowed) {
         if (storageCache.replaceURL && id) {
           Browser.bookmarks.update(id, {
@@ -157,7 +162,10 @@ Browser.bookmarks.onCreated.addListener((id, bookmark) => {
 });
 
 Browser.bookmarks.onChanged.addListener((id, changeInfo) => {
-  if (changeInfo.url) {
+  if (
+    changeInfo.url &&
+    !changeInfo.url.startsWith("https://web.archive.org/") // Do not archive web.archive.org itself!
+  ) {
     ArchiveBookmark(
       id,
       changeInfo.title,

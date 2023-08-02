@@ -8,7 +8,7 @@
   "background": {
     "scripts": ["static/js/background.js"]
   },
-  "host_permissions": ["<all_urls>"],
+  "host_permissions": ["*://web.archive.org/*"],
   "content_scripts": [
     {
       "js": ["static/js/content.js"],
