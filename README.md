@@ -13,9 +13,12 @@ Currently, we only support [Wayback Machine](https://web.archive.org/). More opt
 
 - clone [Archive Bookmarks](https://github.com/pokon548/ArchiveBookmarks) repo: `git clone https://github.com/pokon548/ArchiveBookmarks.git`
 - Go to source path: `cd ArchiveBookmarks`
+- Install required dependencies: `yarn`
 - Build the plugin:
   - Chromium: `yarn build:chrome`
   - Firefox: `yarn build:firefox`
+
+Result is placed within `build` folder.
 
 ## Credit
 
