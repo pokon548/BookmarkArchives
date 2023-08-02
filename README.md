@@ -19,7 +19,7 @@ Currently, we only support [Wayback Machine](https://web.archive.org/). More opt
 
 ## Build instructions (for developers)
 
-- clone [Bookmark Archives](https://github.com/pokon548/Bookmark Archives) repo: `git clone https://github.com/pokon548/BookmarkArchives.git`
+- clone [Bookmark Archives](https://github.com/pokon548/BookmarkArchives) repo: `git clone https://github.com/pokon548/BookmarkArchives.git`
 - Go to source path: `cd BookmarkArchives`
 - Install required dependencies: `yarn`
 - Build the plugin:
